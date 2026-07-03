@@ -1,73 +1,14 @@
-<!-- Tiana 06/19/2026-->
+Tiana - July 1, 2026
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Adventure Character Creator</title>
-<script src="character.js" defer></script>
-<style>
-body {
-font-family: Arial, sans-serif;
-text-align: center;
-padding: 40px;
-background-color: #f0f8ff;
-}
-h1 { color: #2c3e50; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+     <script src="switch.js" defer> </script>
+    <title>Favorite Month Checker</title>
 </head>
 <body>
-<h1>Adventure Character Creator</h1>
-<p>Answer the popups — your hero story appears at the end!</p>
+    <h1>Check Your Favorite Month by clicking F12 to see the information.</h1>
 </body>
 </html>
-
-// Step 3 & 4: Welcome message
-// Chosen Setting: A floating sky city
-alert(`Welcome to the Adventure Character Creator! 
-Prepared by Tiana.
-Get ready to design a hero destined for the heights of a floating sky city!`);
-
-// Step 5: Character name (with a default fallback)
-const charName = prompt(`What is your character's name?`, `Wanderer`) || `Wanderer`;
-
-// Step 6: Pet / companion
-const companionType = prompt(`What type of pet or companion does ${charName} have?`);
-
-// Step 7: Superpower
-const superPower = prompt(`What superpower does ${charName} possess?`);
-
-// Step 8: Years of training
-const trainingYearsText = prompt(`How many years has ${charName} been training? (Enter a number)`);
-
-// Conversion practice
-const trainingYears = Number(trainingYearsText);
-
-// Log both values and their types to the console
-console.log("trainingYearsText:", trainingYearsText, typeof trainingYearsText);
-console.log("trainingYears:", trainingYears, typeof trainingYears);
-
-// Calculate power level
-const powerLevel = trainingYears * 10;
-
-// Step 9: Likes fighting monsters
-const likesFighting = confirm(`Does ${charName} like fighting monsters?
-Click OK for YES  Click Cancel for NO`);
-
-// Log the value and its type to the console
-console.log("likesFighting:", likesFighting, typeof likesFighting);
-
-// Step 10: Loading / preparing message
-alert(`Gathering magic for ${charName}... almost ready!`);
-
-// Step 11: Final character story
-alert(`====================================
-        HERO PROFILE
-====================================
-Name: ${charName}
-Pet: ${companionType}
-Superpower: ${superPower}
-Power Level: ${powerLevel}
-Monster fighter? ${likesFighting ? "Yes" : "No"}
-
-High above the clouds in a floating sky city, ${charName} protects the horizon alongside a loyal ${companionType}. Wielding the incredible power of ${superPower}, no storm or foe can hold them back!
-====================================`);
