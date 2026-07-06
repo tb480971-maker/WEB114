@@ -1,4 +1,4 @@
-Tiana - July 1, 2026
+// Tiana - July 1, 2026
 
 // Ask the user for their favorite month, convert it to lowercase, and store it
 let favMonth = prompt("What is your favorite month?").toLowerCase();
