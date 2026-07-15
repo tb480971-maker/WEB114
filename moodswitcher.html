@@ -1,0 +1,65 @@
+<!-- Tiana - July 15, 2026 -->
+ <!DOCTYPE html>
+ <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mood Changer Project</title>
+        <!-- Link to your CSS file -->
+         <link rel="stylesheet" href="moods.css">
+         <!-- Defer ensures the DOM is fully loaded before the script executes -->
+          <script src="moods.js" defer></script>
+    </head>
+    <body>
+
+        <header>
+            <h1>Current Mood: <span id="current-mood">Neutral</span></h1>
+        </header>
+
+        <main id="main-content">
+            <!-- Event delegation: We put the click listener on this container -->
+             <div id="button-container">
+       <div id="button-container">
+         <button id="happy-btn" class="mood-btn" data-mood="happy">Happy</button>
+         <button id="calm-btn" class="mood-btn" data-mood="calm">Calm</button>
+         <button id="angry-btn" class="mood-btn" data-mood="angry">Angry</button>
+         <button id="sad-btn" class="mood-btn" data-mood="sad">Sad</button>
+         <button id="random-btn">Random Mood 🎲</button>
+      </div>
+            
+
+             <div id="message-container">
+             <p id="display-message">Choose a mood above to change the vibe of the page.</p>
+             </div>
+
+             <hr>
+
+             <!-- Assignment Questions and Answer Section -->
+              <section class="questions-section">
+                <h2>Assignment Concept Questions</h2>
+
+                <div class="question-block">
+                    <h3>1.Why is <code>textContent</code> safer than <code>innerHTML</code>?</h3>
+                    <p>
+                        <strong>Answer:</strong> <code>textContent</code> treats all input strictly as plain text, rendering code characters literally. <code>innerHTML</code> parses text as HTML markup. If you use <code>innerHTML</code> with unvalidated user input, it leaves the page open to <strong>Cross-Site scripting (XSS)</strong> attacks, where malicious actors can inject and execute arbitrary JavaScript scripts inside the browser.
+                </p>
+                </div>
+
+                <div class="question-block">
+                    <h3>2. How are HTML elements connected to JavaScript variables using DOM selection?</h3>
+                    <p>
+                        <strong>Answer:</strong>Connection is achieved using DOM selection methods provided by the global <code>document</code>object, such as <code>document.getElementById()</code> or <code>document.querySelector()</code>. These methods search the DOM tree for nodes matching the specified ID, class, or selector and return a reference to that element, which is then assigned to a JavaScript variable.
+                    </p>
+                </div>
+
+                <div class="question-block">
+                    <h3>3. What would happen to the text box with <code>id="text"</code> if I added this line to the code above it: <code>text.textContent = "Hello!"</code></h3>
+                    <p> 
+                        <strong>Answer:</strong> The browser would immediately overwrite whatever content was previously nested inside the element with the ID <code>text</code> and replace it with the plain string <code>"Hello!"</code>. If the variable <code>text</code> had not been declared beforehand, modern browsers might attempt to resolve the ID globally, but it is best practice to select the element explicitly first.
+                    </p>
+                </div>
+              </section>
+        </main>
+
+    </body>
+ </html>
